@@ -1,0 +1,30 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+}
+.img-responsive{
+  height: 100px;
+  width: 100%;
+}
+
+.row{
+  width:100%;
+}
+#loginInfo{
+  width:30%;
+}
+.col-sm-6{
+  width:70%;
+}
+
+input{
+  width:100px;
+}
+
+.content{
+  width:66%;
+}
+.info{
+  height:500px;
+}
+
