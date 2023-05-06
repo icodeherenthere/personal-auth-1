@@ -1,0 +1,180 @@
+/* Set font family */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: lightgray;
+}
+
+/* Style header */
+.page-header {
+  width: 500px;
+  border: 2px solid black;
+  padding: 20px;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+/* Style logout button */
+.page-header .btn {
+  margin-top: 10px;
+}
+.btn-default {
+  font-size: 24px;
+}
+/* Style clock section */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.timer-section h1 {
+  font-size: 72px;
+  margin: 0 10px;
+}
+.row{
+  background-image: url(img/backgroundcars.jpeg);
+}
+/* Style car info */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: lightgray;
+  font: 30px;
+}
+
+.content {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5px;
+  width: calc(50% - 10px);
+  box-sizing: border-box;
+}
+
+.content span {
+  display: block;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bid {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.bidButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.fa-trash {
+  margin-left: 10px;
+  color: red;
+  cursor: pointer;
+}
+
+
+
+
+
+/* *{
+  font-family: 'Lato', sans-serif;
+  font: 50px;
+  font-style: bold;
+}
+
+body{
+  padding-top:50px;
+  word-wrap:break-word;
+  background-color: blue;
+  color: white;
+  
+}
+.img-responsive{
+  height: 100px;
+  width: 100%;
+}
+
+.row{
+  width:100%;
+}
+#loginInfo{
+  width:30%;
+}
+.col-sm-6{
+  width:70%;
+  font: 30px;
+}
+
+input{
+  width:100px;
+}
+
+.content{
+  width:66%;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info{
+  height:500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+section {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10rem;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 0 10px white;
+}
+
+h1:not(:last-child) {
+  border-right: 2px solid white;
+  padding-right: 1rem;
+}
+
+ */

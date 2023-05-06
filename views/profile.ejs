@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <title>CAR~BAAZAR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+
+        <div class="page-header">
+          <h1 class="display-4">Your Bids</h1>
+          <p class="lead">Where your needs are met and then a new car is yours!</p>
+          <a href="/logout" class="btn btn-primary btn-sm">Logout</a>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-6 text-center timer-section">
+            <h1 class="display-1" id="hours"></h1>
+            <p class="lead">Hours</p>
+          </div>
+          <div class="col-md-6 text-center timer-section">
+            <h1 class="display-1" id="minutes"></h1>
+            <p class="lead">Minutes</p>
+            <h1 class="display-1" id="seconds"></h1>
+            <p class="lead">Seconds</p>
+          </div>
+        </div>
+      
+      </div>
+      
+<div class="row mx-auto">
+    <div class="col-sm-6 ">
+      <h3>INFO</h3>
+      <ul class="info">
+        <% for(var i=0; i<info.length; i++) {%>
+          <li class="content">
+            <span><%= info[i].carName %></span>
+            <span><img src=" img/carPics/<%= info[i].img%>"></span>
+            <span><%= info[i].askPrice %></span>
+            <span>$<%= info[i].bidPrice %></span>
+            <span><input class="bid" placeholder="$"></span>
+            <span><button class="bidButton">Bid</button></span>
+            <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+    <div class="col-sm-6">
+      <!-- Other content here -->
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
