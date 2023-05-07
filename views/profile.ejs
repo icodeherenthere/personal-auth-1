@@ -51,9 +51,40 @@
         <% } %>
       </ul>
     </div>
-    <div class="col-sm-6">
-      <!-- Other content here -->
-    </div>
+    <section class="formBack">
+      <div class="col-sm-6">
+        <div class="container bg-secondary">
+          <div class="row">
+            <div class="col-sm-6">
+              <h1>Upload new cars to sell below!</h1>
+              <% if (user.local.email) { %>
+                <form action="/" method="POST">
+                  <div class="form-group">
+                    <label for="carName">Car Name:</label>
+                    <input type="text" class="form-control" id="carName" name="carName">
+                  </div>
+                  <div class="form-group">
+                    <label for="img">Car Image:</label>
+                    <input type="file" class="form-control-file" id="img" name="img">
+                  </div>
+                  <div class="form-group">
+                    <label for="askPrice">Ask Price:</label>
+                    <input type="number" class="form-control" id="askPrice" name="askPrice" min="0" placeholder="Ask Price">
+                  </div>
+                  <div class="form-group">
+                    <label for="bidPrice">Bid Price:</label>
+                    <input type="number" class="form-control" id="bidPrice" name="bidPrice" min="0" placeholder="Bid Price">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <% } %>
+      </div>
+    </section>
   </div>
 </div>
 

@@ -47,31 +47,34 @@ Array.from(trash).forEach(function(element) {
 });
 
 // retrieve targetDate from localStorage, or set a new target date
-let targetDate = new Date(localStorage.getItem("targetDate"));
-if (!targetDate || targetDate < new Date()) {
-  targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 1);
-  localStorage.setItem("targetDate", targetDate);
-}
+// let targetDate = new Date(localStorage.getItem("targetDate"));
+// if (!targetDate || targetDate < new Date()) {
+//   targetDate = new Date();
+//   targetDate.setDate(targetDate.getDate() + 1);
+//   localStorage.setItem("targetDate", targetDate);
+// }
 
 // update the countdown every second
 setInterval(updateCountdown, 1000);
-
+let targetDate = new Date(currentDate.getTime());
+targetDate.setSeconds(targetDate.getSeconds() + 70)
 function updateCountdown() {
   // get the current date and time
   let currentDate = new Date();
+  
+  
 
   // calculate the time remaining until the target date
-  let timeRemaining = targetDate.getTime() - currentDate.getTime() + (1000 * 60 * 60 * 49);
-
+  let timeRemaining = (targetDate.getTime() - currentDate.getTime());
+console.log(timeRemaining, currentDate, targetDate)
   // calculate the number of hours, minutes, and seconds remaining
-  let hoursRemaining = 0
-  let minutesRemaining = 0
-  let secondsRemaining = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-  
-  // let hoursRemaining = Math.floor(timeRemaining / (1000 * 60 * 60));
-  // let minutesRemaining = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  // let hoursRemaining = 0
+  // let minutesRemaining = 0
   // let secondsRemaining = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  
+  let hoursRemaining = Math.floor(timeRemaining / (1000 * 60 * 60));
+  let minutesRemaining = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  let secondsRemaining = Math.floor((timeRemaining % (1000 * 60)) / 1000);
   // update the HTML to display the time remaining
   document.getElementById("hours").textContent = hoursRemaining.toString().padStart(2, "0");
   document.getElementById("minutes").textContent = minutesRemaining.toString().padStart(2, "0");
@@ -91,10 +94,13 @@ function updateCountdown() {
   if(hoursRemaining === 1 && minutesRemaining === 0){
   alert('1 hr left!')
   }
+  if(hoursRemaining === 0 && minutesRemaining === 1 && secondsRemaining === 0){
+    alert('1 min left!')
+    }
 
   if (timeRemaining <= 0) {
     // get the bid price of the item
-    let newPrice = `${info[i].bidPrice}`;
+    // let newPrice = `${info[i].bidPrice}`;
     
     // compare the current price to the initial price
     if (newPrice > currentPrice) {
